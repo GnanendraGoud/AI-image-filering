@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Image Filter Interface</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md fixed w-full z-10">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="font-bold text-xl text-blue-600">AI Filter App</div>
+      <ul class="flex space-x-6">
+        <li><a href="#section1" class="hover:text-blue-500">Upload</a></li>
+        <li><a href="#section2" class="hover:text-blue-500">Filters</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Section 1: Upload Image -->
+  <section id="section1" class="pt-20 px-4 py-16 bg-white">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold mb-4">Upload Your Image</h2>
+      <p class="mb-6">Select an image to apply AI-based filters.</p>
+      <input type="file" accept="image/*" class="mx-auto block border border-gray-300 p-2 rounded" />
+      <img id="preview" class="mt-6 mx-auto max-w-sm hidden rounded shadow-md" alt="Preview"/>
+    </div>
+  </section>
+
+  <!-- Section 2: Apply Filters -->
+  <section id="section2" class="px-4 py-16 bg-gray-50">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold mb-4">Choose a Filter</h2>
+      <p class="mb-6">Click a filter to apply AI effects (mock function here).</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <button onclick="applyFilter('colorize')" class="bg-blue-500 text-white px-4 py-2 rounded">Colorize</button>
+        <button onclick="applyFilter('sepia')" class="bg-yellow-500 text-white px-4 py-2 rounded">Sepia</button>
+        <button onclick="applyFilter('invert')" class="bg-purple-500 text-white px-4 py-2 rounded">Invert</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
